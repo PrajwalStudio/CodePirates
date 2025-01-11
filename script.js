@@ -1,25 +1,12 @@
-// Fetch posts from Flask backend (using Fetch API)
-const fetchPosts = async () => {
-    try {
-        const response = await fetch('http://localhost:5000/api/posts');
-        const posts = await response.json();
-        
-        const feedSection = document.getElementById('feed');
-        feedSection.innerHTML = '';  // Clear the feed section
-        posts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('post');
-            postElement.innerHTML = `
-                <h3>${post.user}</h3>
-                <p>${post.content}</p>
-            `;
-            feedSection.appendChild(postElement);
-        });
-    } catch (error) {
-        console.error('Error fetching posts', error);
-    }
-};
+// Example of adding functionality to buttons (you can use APIs for social login)
+document.querySelector('.google-btn').addEventListener('click', function() {
+    alert('Sign up with Google clicked');
+});
 
-window.onload = () => {
-    fetchPosts();
-};
+document.querySelector('.apple-btn').addEventListener('click', function() {
+    alert('Sign up with Apple clicked');
+});
+
+document.querySelector('.create-btn').addEventListener('click', function() {
+    alert('Create account clicked');
+});
