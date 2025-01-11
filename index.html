@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - NetMingle</title>
+    <title>NetMingle - Responsive Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Login Page -->
-    <div class="login-container">
-        <div class="logo">
-            <!-- Replace with your logo if needed -->
-            <img src="logo.png" alt="NetMingle Logo">
-        </div>
-        <h1>Happening now</h1>
-        <h3>Join today</h3>
-
-        <div class="social-buttons">
-            <button class="google-btn">Sign up with Google</button>
-            <button class="apple-btn">Sign up with Apple</button>
-            <span>or</span>
-            <button class="create-btn">Create account</button>
+    <div class="container">
+        <!-- Left Section with Logo -->
+        <div class="left-section">
+            <div class="logo">
+                <img src="fal_logo_png.png" alt="NetMingle Logo">
+            </div>
         </div>
 
-        <div class="signin">
-            <p>Already have an account? <a href="signin.html">Sign in</a></p>
+        <!-- Right Section with Login Details -->
+        <div class="right-section">
+            <h1>Happening now</h1>
+            <h2>Join today.</h2>
+
+            <div class="buttons">
+                <button class="social-btn google">Sign up with Google</button>
+                <button class="social-btn apple">Sign up with Apple</button>
+            </div>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <button class="create-account">Create account</button>
+
+            <p class="signin-text">Already have an account? <a href="#">Sign in</a></p>
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
