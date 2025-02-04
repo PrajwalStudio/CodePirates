@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 350px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .login-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .login-header img {
+            width: 40px;
+            height: 40px;
+        }
+        .login-header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin: 0;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+        .login-container input[type="text"]::placeholder,
+        .login-container input[type="password"]::placeholder {
+            color: #ccc;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0 10px;
+            border: none;
+            border-radius: 8px;
+            background: #1a73e8;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .login-container button:hover {
+            background: #155ab6;
+            transform: translateY(-2px);
+        }
+        .login-container button:active {
+            transform: translateY(0);
+        }
+        .login-container .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .login-container .remember-forgot label {
+            display: flex;
+            align-items: center;
+            color: #ccc;
+        }
+        .login-container .remember-forgot input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .login-container .remember-forgot a {
+            color: #1a73e8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .login-container .remember-forgot a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .login-container a.register-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        .login-container a.register-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 20px;
+            }
+            .login-header h1 {
+                font-size: 20px;
+            }
+            .login-header img {
+                width: 30px;
+                height: 30px;
+            }
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+                padding: 10px;
+                font-size: 12px;
+            }
+            .login-container button {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .login-container .remember-forgot {
+                font-size: 12px;
+            }
+            .login-container a.register-link {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Header with Logo and Website Name -->
+        <div class="login-header">
+            <img src="logo.png" alt="NetMingle Logo">
+            <h1>NetMingle</h1>
+        </div>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" id="remember"> Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#" class="register-link">Don't have an account? Register</a>
+    </div>
+</body>
+</html>
